@@ -30,7 +30,6 @@ psycopg2==2.9.1
 Pygments==2.7.1
 pylint==2.6.0
 PyPDF2==1.26.0
-pypiwin32==223
 PySocks==1.7.1
 python-dateutil==2.8.1
 python-decouple==3.4
