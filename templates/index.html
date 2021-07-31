@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarti's Portfolio</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="shortcut icon" href="./static/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./static/images/favicon.ico" alt="logo">
+        </div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#services" class="nav__link">My skills</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+                <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact me</a></li>
+                <li class="nav__item"><a href="blog.html" class="nav__link">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="intro" id="home">
+        <h1 class="section__title section__title--intro">
+            Hii, I am <strong>Aarti Bhosale</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">Computer Engineer</p>
+        <img src="./static/images/image1.jpeg" alt="picture" class="intro__img">
+    </section>
+
+    <section class="my-services" id="services">
+        <h2 class="section__title section__title--services">My Skills</h2>
+        <div class="services">
+            <div class="service">
+                <h3><u>Industry Knowledge</u></h3>
+                <ul>
+                    <li>Web Development</li>
+                    <li>Android App Development</li>
+                    <li>Data Structures</li>
+                    <li>Algorithms</li>
+                    <li>Data Analysis</li>
+                </ul>
+            </div>
+            <div class="service">
+                <h3><u>Programming Languages</u></h3>
+                <ul>
+                    <li>C++</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>Django</li>
+                    <li>Javascript</li>
+                    <li>HTML5</li>
+                    <li>CSS</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+            <div class="service">
+                <h3><u>Databases</u></h3>
+                <ul>
+                    <li>MySQL</li>
+                    <li>Firebase</li>
+                </ul>
+            </div>
+            <div class="service">
+                <h3><u>Tools and Technologies</u></h3>
+                <ul>
+                    <li>Machine Learning</li>
+                    <li>Git</li>
+                    <li>Github</li>
+                    <li>AWS</li>
+                </ul>
+            </div>
+        </div>
+        <a href="https://github.com/aarti213" class="btn">Let's surf through my work</a>
+    </section>
+    <section class="about-me" id="about">
+        <h2 class="section-title secton__title--about">Who I am</h2>
+        <p class="section__subtitle section__subtitle--about">Computer Engineer</p>
+        <div class="about-me__body">
+            <p>Goal and solution oriented junior studying Computer Engineering at PESMCOE Pune. Passionate about
+                programming,software designing and development.Adept at motivating self
+                and others. Also, if possible I would love to contribute in wildlife conservation field.</p>
+            <p>Other than technical skills I love gardening and playing basketball.</p>
+            <a href="#" class="btn">Resume</a>
+        </div>
+        <img src="./static/images/image2.jpeg" alt="" class="about-me__img">
+    </section>
+
+    <section class="my-work" id="work">
+        <h2 class="section__title section__title--work">Projects</h2>
+        <p class="section__subtitle section__subtitle--work">
+            A selection of my work
+        </p>
+        <div class="portfolio">
+            <a href="https://github.com/aarti213/EDA-on-Netflix-Movies-and-TV-Shows" class="portfolio__item">
+                <img src="./static/images/netflix.jpg" style="height: 250px; width:500px;" alt="" class="portfolio__img">
+                <p style="color: black;">Netflix EDA</p>    
+            </a>
+            <a href="https://github.com/aarti213/e-Learning-platform" class="portfolio__item">
+                <img src="./static/images/elearning.jpg" style="height: 250px; width:500px;" alt="" class="portfolio__img">
+                <p style="color: black;">e-Learning Platform</p>
+            </a>
+            <a href="https://github.com/aarti213/tic-tac-toeApp/tree/master" class="portfolio__item">
+                <img src="./static/images/tictactoe.png" style="height: 250px; width:500px;" alt="" class="portfolio__img">
+                <p style="color: black;">Tic-Tac-Toe App</p>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container" id="contact">
+            <h3 style="margin-bottom: 12px ;">Contact Me</h3>
+            <form method="POST">
+            {% csrf_token %}
+                <input type="text" id="name" name="name" placeholder="Enter your  name" required>
+                <input type="text" id="email" name="email" placeholder="Enter your email id" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                <textarea id="subject" name="message" placeholder="Write a message" style="height:200px" required></textarea>
+                <input type="submit" value="Submit" class="btn">
+            </form>
+        </div>
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://twitter.com/aarti_bhosale">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com/aarti213">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://www.linkedin.com/in/aarti-bhosale-34863a188/">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>     
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://www.hackerrank.com/aarti_r_bhosale">
+                    <i class="fab fa-hackerrank"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="./static/js/index.js"></script>
+
+</body>
+
+</html>
